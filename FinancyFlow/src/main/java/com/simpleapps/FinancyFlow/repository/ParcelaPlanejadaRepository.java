@@ -1,7 +1,7 @@
-package com.simpleapps.FinancyFlow.repositories;
+package com.simpleapps.FinancyFlow.repository;
 
-import com.simpleapps.FinancyFlow.domain.gastoPlanejado.GastoPlanejado;
-import com.simpleapps.FinancyFlow.domain.parcelaPlanejada.ParcelaPlanejada;
+import com.simpleapps.FinancyFlow.model.GastoPlanejado;
+import com.simpleapps.FinancyFlow.model.ParcelaPlanejada;
 import org.springframework.data.jpa.repository.JpaRepository;
 
 import java.time.LocalDate;

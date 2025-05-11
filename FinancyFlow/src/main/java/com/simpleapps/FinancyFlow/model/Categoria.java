@@ -1,11 +1,18 @@
-package com.simpleapps.FinancyFlow.domain.categoria;
+package com.simpleapps.FinancyFlow.model;
 
-import com.simpleapps.FinancyFlow.domain.usuario.Usuario;
 import com.simpleapps.FinancyFlow.enums.TipoCategoria;
 import jakarta.persistence.*;
+import lombok.AllArgsConstructor;
+import lombok.Getter;
+import lombok.NoArgsConstructor;
+import lombok.Setter;
 
 @Entity
 @Table(name = "categorias")
+@Getter
+@Setter
+@NoArgsConstructor
+@AllArgsConstructor
 public class Categoria {
     @Id
     @GeneratedValue(strategy = GenerationType.IDENTITY)

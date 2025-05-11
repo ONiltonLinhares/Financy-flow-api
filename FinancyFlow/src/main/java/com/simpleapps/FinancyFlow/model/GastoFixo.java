@@ -1,13 +1,19 @@
-package com.simpleapps.FinancyFlow.domain.gastoFixo;
+package com.simpleapps.FinancyFlow.model;
 
-import com.simpleapps.FinancyFlow.domain.categoria.Categoria;
-import com.simpleapps.FinancyFlow.domain.usuario.Usuario;
 import jakarta.persistence.*;
+import lombok.AllArgsConstructor;
+import lombok.Getter;
+import lombok.NoArgsConstructor;
+import lombok.Setter;
 
 import java.math.BigDecimal;
 
 @Entity
 @Table(name = "gastos_fixos")
+@Getter
+@Setter
+@NoArgsConstructor
+@AllArgsConstructor
 public class GastoFixo {
     @Id
     @GeneratedValue(strategy = GenerationType.IDENTITY)

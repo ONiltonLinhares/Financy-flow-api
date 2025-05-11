@@ -1,16 +1,22 @@
-package com.simpleapps.FinancyFlow.domain.gasto;
+package com.simpleapps.FinancyFlow.model;
 
-import com.simpleapps.FinancyFlow.domain.categoria.Categoria;
-import com.simpleapps.FinancyFlow.domain.usuario.Usuario;
-import com.simpleapps.FinancyFlow.enums.TipoGasto;
+import com.simpleapps.FinancyFlow.enums.TipoRenda;
 import jakarta.persistence.*;
+import lombok.AllArgsConstructor;
+import lombok.Getter;
+import lombok.NoArgsConstructor;
+import lombok.Setter;
 
 import java.math.BigDecimal;
 import java.time.LocalDate;
 
 @Entity
-@Table(name = "gastos")
-public class Gasto {
+@Table(name = "rendas")
+@Getter
+@Setter
+@NoArgsConstructor
+@AllArgsConstructor
+public class Renda {
     @Id
     @GeneratedValue(strategy = GenerationType.IDENTITY)
     private Long id;
@@ -23,16 +29,14 @@ public class Gasto {
     @JoinColumn(name = "categoria_id")
     private Categoria categoria;
 
-    @Column(name = "data_gasto")
-    private LocalDate dataGasto;
+    @Column(name = "data_recebimento")
+    private LocalDate dataRecebimento;
 
     @Enumerated(EnumType.STRING)
-    private TipoGasto tipo;
+    private TipoRenda tipo;
 
     @ManyToOne
     @JoinColumn(name = "usuario_id")
     private Usuario usuario;
-
-    @Column(name = "origem_id")
-    private Long origemId; // Referência opcional
 }
+

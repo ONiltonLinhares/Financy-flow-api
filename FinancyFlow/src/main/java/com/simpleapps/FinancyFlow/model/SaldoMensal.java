@@ -1,7 +1,10 @@
-package com.simpleapps.FinancyFlow.domain.saldoMensal;
+package com.simpleapps.FinancyFlow.model;
 
-import com.simpleapps.FinancyFlow.domain.usuario.Usuario;
 import jakarta.persistence.*;
+import lombok.AllArgsConstructor;
+import lombok.Getter;
+import lombok.NoArgsConstructor;
+import lombok.Setter;
 
 import java.math.BigDecimal;
 import java.time.LocalDate;
@@ -10,6 +13,10 @@ import java.time.LocalDate;
 @Table(name = "saldos_mensais", uniqueConstraints = {
         @UniqueConstraint(columnNames = {"usuario_id", "mes_ano"})
 })
+@Getter
+@Setter
+@NoArgsConstructor
+@AllArgsConstructor
 public class SaldoMensal {
     @Id
     @GeneratedValue(strategy = GenerationType.IDENTITY)

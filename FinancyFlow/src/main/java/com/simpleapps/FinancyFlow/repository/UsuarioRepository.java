@@ -1,6 +1,6 @@
-package com.simpleapps.FinancyFlow.repositories;
+package com.simpleapps.FinancyFlow.repository;
 
-import com.simpleapps.FinancyFlow.domain.usuario.Usuario;
+import com.simpleapps.FinancyFlow.model.Usuario;
 import org.springframework.data.jpa.repository.JpaRepository;
 
 import java.util.Optional;

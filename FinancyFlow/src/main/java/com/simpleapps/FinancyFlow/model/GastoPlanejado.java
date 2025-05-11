@@ -1,13 +1,19 @@
-package com.simpleapps.FinancyFlow.domain.gastoPlanejado;
+package com.simpleapps.FinancyFlow.model;
 
-import com.simpleapps.FinancyFlow.domain.categoria.Categoria;
-import com.simpleapps.FinancyFlow.domain.usuario.Usuario;
 import jakarta.persistence.*;
+import lombok.AllArgsConstructor;
+import lombok.Getter;
+import lombok.NoArgsConstructor;
+import lombok.Setter;
 
 import java.time.LocalDate;
 
 @Entity
 @Table(name = "gastos_planejados")
+@Getter
+@Setter
+@NoArgsConstructor
+@AllArgsConstructor
 public class GastoPlanejado {
     @Id
     @GeneratedValue(strategy = GenerationType.IDENTITY)
