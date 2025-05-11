@@ -2,7 +2,7 @@ package com.simpleapps.FinancyFlow.repository;
 
 import com.simpleapps.FinancyFlow.model.Categoria;
 import com.simpleapps.FinancyFlow.model.Usuario;
-import com.simpleapps.FinancyFlow.enums.TipoCategoria;
+import com.simpleapps.FinancyFlow.model.enums.TipoCategoria;
 import org.springframework.data.jpa.repository.JpaRepository;
 
 import java.util.List;

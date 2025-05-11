@@ -1,6 +1,6 @@
 package com.simpleapps.FinancyFlow.model;
 
-import com.simpleapps.FinancyFlow.enums.TipoGasto;
+import com.simpleapps.FinancyFlow.model.enums.TipoGasto;
 import jakarta.persistence.*;
 import lombok.AllArgsConstructor;
 import lombok.Getter;

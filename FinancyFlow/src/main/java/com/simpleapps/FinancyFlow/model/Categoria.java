@@ -1,6 +1,6 @@
 package com.simpleapps.FinancyFlow.model;
 
-import com.simpleapps.FinancyFlow.enums.TipoCategoria;
+import com.simpleapps.FinancyFlow.model.enums.TipoCategoria;
 import jakarta.persistence.*;
 import lombok.AllArgsConstructor;
 import lombok.Getter;
