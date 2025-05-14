@@ -3,6 +3,7 @@ package com.simpleapps.FinancyFlow.service;
 import com.simpleapps.FinancyFlow.dto.usuario.UsuarioRequestDTO;
 import com.simpleapps.FinancyFlow.dto.usuario.UsuarioResponseDTO;
 import com.simpleapps.FinancyFlow.model.Usuario;
+import com.simpleapps.FinancyFlow.model.enums.TipoUsuario;
 import com.simpleapps.FinancyFlow.repository.UsuarioRepository;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
@@ -23,6 +24,7 @@ public class UsuarioService {
         usuario.setNome(dto.getNome());
         usuario.setEmail(dto.getEmail());
         usuario.setSenhaHash(dto.getSenha());
+        usuario.setTipo(TipoUsuario.GRATUITO);
 
         Usuario salvo = usuarioRepository.save(usuario);
         return toResponseDTO(salvo);

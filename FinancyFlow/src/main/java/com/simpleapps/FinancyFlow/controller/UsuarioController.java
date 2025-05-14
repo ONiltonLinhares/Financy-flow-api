@@ -14,12 +14,6 @@ public class UsuarioController {
     @Autowired
     private UsuarioService usuarioService;
 
-    @PostMapping
-    public ResponseEntity<UsuarioResponseDTO> criarUsuario(@RequestBody UsuarioRequestDTO dto) {
-        UsuarioResponseDTO response = usuarioService.criarUsuario(dto);
-        return ResponseEntity.ok(response);
-    }
-
     @GetMapping("/{id}")
     public ResponseEntity<UsuarioResponseDTO> obterUsuario(@PathVariable Long id) {
         UsuarioResponseDTO response = usuarioService.obterUsuarioPorId(id);
